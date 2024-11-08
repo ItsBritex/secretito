@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Ti, Kari</title>
+    <style>
+        /* Configuración general */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: #1a1a40;
+            color: #ffcccb;
+            font-family: 'Georgia', serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+            flex-direction: column;
+        }
+        h1 {
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            color: #ffcccb;
+            letter-spacing: 1px;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        /* Efecto de aparición */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        button {
+            background-color: #4b0082;
+            color: #ffcccb;
+            border: 2px solid #ffcccb;
+            padding: 12px 25px;
+            margin: 15px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: 0.3s;
+            width: 90%;
+            max-width: 200px;
+            border-radius: 8px;
+        }
+        button:hover {
+            background-color: #ffcccb;
+            color: #4b0082;
+            transform: scale(1.05);
+        }
+        .message {
+            margin-top: 25px;
+            font-size: 1rem;
+            line-height: 1.6;
+            max-width: 600px;
+            color: #ffd1d1;
+            background-color: rgba(255, 204, 203, 0.1);
+            border: 1px solid #ffcccb;
+            padding: 20px;
+            border-radius: 8px;
+            display: none;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        /* Adaptabilidad para móviles */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.5rem;
+            }
+            button {
+                font-size: 1rem;
+                padding: 10px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Título en binario: "Te amo Kari en todo código e idioma" -->
+    <h1>01010100 01100101 00100000 01100001 01101101 01101111 00100000 01001011 01100001 01110010 01101001</h1>
+    <button onclick="mostrarMensaje('sentimiento')">Sentimiento</button>
+    <button onclick="mostrarMensaje('codigo')">Código</button>
+    
+    <p id="mensaje" class="message"></p>
+
+    <script>
+        function mostrarMensaje(tipo) {
+            const mensaje = document.getElementById('mensaje');
+            if (tipo === 'sentimiento') {
+                mensaje.innerHTML = "Kari, en estos dos meses he descubierto un amor que es más grande de lo que alguna vez imaginé. La Biblia dice que el amor verdadero es paciente y bondadoso, y cada día contigo entiendo más su significado. Eres mi inspiración y mi paz, y te amo de una forma única y profunda. Eres mi mayor bendición, y agradezco cada instante que puedo compartir contigo. ❤";
+            } else if (tipo === 'codigo') {
+                mensaje.innerHTML = "<strong>El Abecedario Codificado:</strong><br>" +
+                    "A: 1<br>B: 2<br>C: 3<br>D: 4<br>E: 5<br>F: 6<br>G: 7<br>H: 8<br>I: 9<br>J: 10<br>" +
+                    "K: 11<br>L: 12<br>M: 13<br>N: 14<br>O: 15<br>P: 16<br>Q: 17<br>R: 18<br>" +
+                    "S: 19<br>T: 20<br>U: 21<br>V: 22<br>W: 23<br>X: 24<br>Y: 25<br>Z: 26";
+            }
+            mensaje.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
